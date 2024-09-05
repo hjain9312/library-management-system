@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <%= link_to 'Home', root_path, class: 'nav-link' %> <!-- Linking to the home page -->
+      </li>
+      <li class="nav-item">
+        <%= link_to 'Tickets', '#', class: 'nav-link' %> <!-- Replace with the actual path -->
+      </li>
+      <li class="nav-item">
+        <%= link_to 'Way', '#', class: 'nav-link' %> <!-- Replace with the actual path -->
+      </li>
+      <li class="nav-item">
+        <%= link_to 'Things to do', '#', class: 'nav-link' %> <!-- Replace with the actual path -->
+      </li>      <li class="nav-item">
+        <%= link_to 'Hotels', '#', class: 'nav-link' %> <!-- Replace with the actual path -->
+      </li>
+      <li class="nav-item">
+        <%= link_to 'Resturant', '#', class: 'nav-link' %> <!-- Replace with the actual path -->
+      </li>
+    </ul>
+    <span class="navbar-text">
+      <% if user_signed_in? %>
+        <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'nav-link' %>
+      <% else %>
+        <%= link_to 'Login', new_user_session_path, class: 'nav-link' %>
+      <% end %>
+    </span>
+  </div>
+</nav>
